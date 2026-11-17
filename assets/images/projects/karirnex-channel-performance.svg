@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+<title id="title">KarirNex Perfume retail sales analysis</title>
+<desc id="desc">Training dataset dashboard showing 8.386 billion rupiah net sales, 9,170 completed orders, average order value 914,472 rupiah, and net sales by six channels.</desc>
+<defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#101d32"/><stop offset="1" stop-color="#1c3150"/></linearGradient><linearGradient id="bar" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4169dc"/><stop offset="1" stop-color="#8ca6ff"/></linearGradient></defs>
+<rect width="1200" height="760" rx="24" fill="url(#bg)"/>
+<text x="64" y="70" fill="#aebbd0" font-family="Arial,sans-serif" font-size="18" letter-spacing="4">KARIRNEX PERFUME / RETAIL ANALYTICS</text>
+<text x="64" y="126" fill="#ffffff" font-family="Arial,sans-serif" font-size="42" font-weight="700">Sales performance snapshot</text>
+<text x="64" y="160" fill="#aebbd0" font-family="Arial,sans-serif" font-size="17">FICTIONAL 2025 BOOTCAMP DATA · COMPLETED ORDERS UNLESS NOTED</text>
+<g>
+<rect x="64" y="198" width="330" height="112" rx="14" fill="#243b5d" stroke="#48618a"/>
+<rect x="414" y="198" width="330" height="112" rx="14" fill="#243b5d" stroke="#48618a"/>
+<rect x="764" y="198" width="372" height="112" rx="14" fill="#243b5d" stroke="#48618a"/>
+<text x="90" y="235" fill="#aebbd0" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">NET SALES</text><text x="90" y="284" fill="#ffffff" font-family="Arial,sans-serif" font-size="42" font-weight="700">Rp 8.386B</text>
+<text x="440" y="235" fill="#aebbd0" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">COMPLETED ORDERS</text><text x="440" y="284" fill="#ffffff" font-family="Arial,sans-serif" font-size="42" font-weight="700">9,170</text>
+<text x="790" y="235" fill="#aebbd0" font-family="Arial,sans-serif" font-size="15" letter-spacing="2">AVERAGE ORDER VALUE</text><text x="790" y="284" fill="#ffffff" font-family="Arial,sans-serif" font-size="42" font-weight="700">Rp 914K</text>
+</g>
+<text x="64" y="376" fill="#ffffff" font-family="Arial,sans-serif" font-size="23" font-weight="700">Net sales by channel</text>
+<text x="1136" y="376" text-anchor="end" fill="#9fb0ca" font-family="Arial,sans-serif" font-size="14">IDR · completed orders</text>
+<g font-family="Arial,sans-serif" font-size="17" fill="#d9e2f0">
+<text x="64" y="426">Offline — Toko Karirnex</text><text x="64" y="476">Online — Website Karirnex</text><text x="64" y="526">Marketplace — Toko Biru</text><text x="64" y="576">Online — Live Toktok</text><text x="64" y="626">Marketplace — Toko Hijau</text><text x="64" y="676">Marketplace — Instaria</text>
+</g>
+<g fill="#2b4162"><rect x="360" y="405" width="560" height="22" rx="5"/><rect x="360" y="455" width="560" height="22" rx="5"/><rect x="360" y="505" width="560" height="22" rx="5"/><rect x="360" y="555" width="560" height="22" rx="5"/><rect x="360" y="605" width="560" height="22" rx="5"/><rect x="360" y="655" width="560" height="22" rx="5"/></g>
+<g fill="url(#bar)"><rect x="360" y="405" width="560" height="22" rx="5"/><rect x="360" y="455" width="261" height="22" rx="5"/><rect x="360" y="505" width="250" height="22" rx="5"/><rect x="360" y="555" width="223" height="22" rx="5"/><rect x="360" y="605" width="218" height="22" rx="5"/><rect x="360" y="655" width="140" height="22" rx="5"/></g>
+<g font-family="Arial,sans-serif" font-size="16" fill="#ffffff" text-anchor="end"><text x="1125" y="423">Rp 2.84B · 33.9%</text><text x="1125" y="473">Rp 1.32B · 15.8%</text><text x="1125" y="523">Rp 1.27B · 15.2%</text><text x="1125" y="573">Rp 1.14B · 13.5%</text><text x="1125" y="623">Rp 1.11B · 13.2%</text><text x="1125" y="673">Rp 0.71B · 8.5%</text></g>
+<text x="64" y="730" fill="#9fb0ca" font-family="Arial,sans-serif" font-size="13">Source: KarirNex bootcamp training dataset · Gross sales Rp 9.172B · Returns 436 · Cancelled 394</text>
+</svg>
