@@ -46,7 +46,17 @@
       </a>
       <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false" aria-controls="primary-nav"><span></span><span></span></button>
       <nav class="primary-nav" id="primary-nav" aria-label="Primary navigation">
-        <a href="#education">Education</a><a href="#pathways">Focus</a><a href="#work">Projects</a><a href="#experience">Work Experience</a><a href="#capabilities">Capabilities</a><a href="#contact">Documents</a><a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+        <a href="#education">Education</a><a href="#pathways">Focus</a><a href="#work">Projects</a><a href="#experience">Work Experience</a><a href="#capabilities">Capabilities</a><a href="#contact">Documents</a><button class="nav-fullscreen" id="fullscreen-toggle" type="button"
+            aria-label="Enter fullscreen" aria-pressed="false" title="Enter fullscreen">
+            <svg class="fullscreen-icon-enter" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M8 3H5a2 2 0 0 0-2 2v3M16 3h3a2 2 0 0 1 2 2v3M21 16v3a2 2 0 0 1-2 2h-3M3 16v3a2 2 0 0 0 2 2h3"/>
+            </svg>
+            <svg class="fullscreen-icon-exit" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+              <path d="M8 3v5H3M16 3v5h5M3 16h5v5M21 16h-5v5"/>
+            </svg>
+            <span class="fullscreen-label">Fullscreen</span>
+          </button>
+          <a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
       </nav>
     </div>
   </header>
@@ -448,5 +458,50 @@
     <p id="lightbox-caption"></p>
   </dialog>
   <script src="assets/js/main.js"></script>
+  <script>
+    (() => {
+      const fullscreenButton = document.getElementById('fullscreen-toggle');
+      if (!fullscreenButton) return;
+
+      const root = document.documentElement;
+      const isSupported =
+        typeof root.requestFullscreen === 'function' &&
+        typeof document.exitFullscreen === 'function';
+
+      if (!isSupported) {
+        fullscreenButton.hidden = true;
+        return;
+      }
+
+      const label = fullscreenButton.querySelector('.fullscreen-label');
+
+      const updateFullscreenButton = () => {
+        const isFullscreen = Boolean(document.fullscreenElement);
+        const buttonLabel = isFullscreen ? 'Exit fullscreen' : 'Fullscreen';
+
+        fullscreenButton.setAttribute('aria-pressed', String(isFullscreen));
+        fullscreenButton.setAttribute('aria-label', isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen');
+        fullscreenButton.setAttribute('title', isFullscreen ? 'Exit fullscreen' : 'Enter fullscreen');
+        if (label) label.textContent = buttonLabel;
+      };
+
+      fullscreenButton.addEventListener('click', async () => {
+        try {
+          if (document.fullscreenElement) {
+            await document.exitFullscreen();
+          } else {
+            await root.requestFullscreen({ navigationUI: 'hide' });
+          }
+        } catch (error) {
+          console.warn('Fullscreen could not be activated:', error);
+        }
+      });
+
+      document.addEventListener('fullscreenchange', updateFullscreenButton);
+      document.addEventListener('fullscreenerror', updateFullscreenButton);
+      updateFullscreenButton();
+    })();
+  </script>
+
 </body>
 </html>
